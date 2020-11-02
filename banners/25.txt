@@ -1,0 +1,1 @@
+220 admin@email.com ESMTP Postfix\r\n

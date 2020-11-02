@@ -1,0 +1,18 @@
+FROM ubuntu:latest
+
+RUN apt-get update && apt-get install -y netcat
+
+EXPOSE 21
+EXPOSE 25
+EXPOSE 110
+EXPOSE 143
+EXPOSE 465
+EXPOSE 587
+EXPOSE 993
+EXPOSE 995
+EXPOSE 3306
+EXPOSE 8080
+
+WORKDIR /app
+
+ADD . .
