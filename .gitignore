@@ -1,2 +1,2 @@
-full_log
-**/*.log
+log
+__pycache__

@@ -1,10 +1,12 @@
 version: "3.3"
-   
+
 services:
   honeypot:
     build: .
     volumes:
         - .:/app
+    environment:
+      - ports=21 25 110 143 465 587 993 995 3306 8080
     ports:
         - "21:21"
         - "25:25"
@@ -16,4 +18,4 @@ services:
         - "995:995"
         - "3306:3306"
         - "8080:8080"
-    command: /app/honeypot.sh > full_log
+    command: /app/honeypot.sh
